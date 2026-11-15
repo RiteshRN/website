@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Fleeting Forever</title>
+<link rel="canonical"
+  href="https://riteshragavender.com/poems/fleeting-forever/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v=13">
+<script src="/js/typography.js" defer></script>
+
+<style>
+/* faint starfield — this poem is about carbon forged in stars */
+html { background:var(--paper); }
+body { background:transparent; }
+.sky { position:fixed; inset:0; z-index:-1; pointer-events:none;
+  overflow:hidden;
+  background:
+    radial-gradient(55rem 38rem at 12% -8%,
+      color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%),
+    radial-gradient(48rem 40rem at 100% 112%,
+      color-mix(in srgb, var(--muted) 17%, transparent), transparent 72%); }
+.sky::before, .sky::after {
+  content:''; position:absolute; inset:0; }
+.sky::before {
+  background-image:
+    radial-gradient(1.6px 1.6px at 12% 18%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 26% 74%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 39% 31%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 47% 88%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 58% 12%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 63% 54%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 71% 27%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 79% 82%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 86% 43%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 93% 68%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 8% 52%,  var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 33% 8%,  var(--accent) 50%, transparent 52%),
+    radial-gradient(2px 2px at 51% 41%, var(--accent) 50%, transparent 52%),
+    radial-gradient(2px 2px at 17% 88%, var(--accent) 50%, transparent 52%),
+    radial-gradient(2px 2px at 88% 14%, var(--accent) 50%, transparent 52%),
+    radial-gradient(2px 2px at 67% 74%, var(--accent) 50%, transparent 52%),
+    radial-gradient(2px 2px at 34% 58%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 45% 6%, var(--accent) 50%, transparent 52%);
+  opacity:.8; animation:twinkle 7s ease-in-out infinite; }
+.sky::after {
+  background-image:
+    radial-gradient(1px 1px at 18% 40%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 22% 12%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 36% 60%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 44% 22%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 52% 71%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 61% 90%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 68% 9%,  var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 74% 50%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 82% 24%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 90% 84%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 5% 78%,  var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 30% 44%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 14% 28%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 41% 82%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 57% 33%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 77% 62%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 95% 38%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 48% 15%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 24% 6%,  var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 89% 22%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 3% 34%,  var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 55% 58%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 70% 11%, var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 11% 66%, var(--accent) 50%, transparent 52%);
+  opacity:.62; animation:twinkle 9s ease-in-out infinite 1.5s; }
+@keyframes twinkle {
+  0%,100% { opacity:.4; } 50% { opacity:.82; } }
+
+/* occasional fireworks: a trail climbs, a burst blooms */
+.fw { position:absolute; width:0; height:0; }
+.fw::before { content:''; position:absolute; left:-1px;
+  top:0; width:2px; height:2.4rem; opacity:0;
+  background:linear-gradient(to top, transparent,
+    color-mix(in srgb, var(--c1) 80%, #fff));
+  animation:rise var(--t) linear infinite var(--d); }
+.fw::after { content:''; position:absolute; left:-.15em;
+  top:-.15em; width:.3em; height:.3em; border-radius:50%;
+  background:var(--c1); opacity:0;
+  box-shadow:
+    0 -4em 0 var(--c1), 2.8em -2.8em 0 var(--c2),
+    4em 0 0 var(--c1), 2.8em 2.8em 0 var(--c2),
+    0 4em 0 var(--c1), -2.8em 2.8em 0 var(--c2),
+    -4em 0 0 var(--c1), -2.8em -2.8em 0 var(--c2),
+    2.1em -.9em 0 var(--c2), .9em -2.1em 0 var(--c1),
+    -.9em -2.1em 0 var(--c2), -2.1em -.9em 0 var(--c1),
+    -2.1em .9em 0 var(--c2), -.9em 2.1em 0 var(--c1),
+    .9em 2.1em 0 var(--c2), 2.1em .9em 0 var(--c1);
+  animation:burst var(--t) ease-out infinite var(--d); }
+.fw1 { left:62%; top:21%; font-size:1.65rem;
+  --c1:#F2C568; --c2:#FFE9BC;
+  --t:13s; --d:-3s; }
+.fw2 { left:84%; top:42%; font-size:1.3rem;
+  --c1:#EE8FB8; --c2:#FFD6E6;
+  --t:16s; --d:-9s; }
+.fw3 { left:73%; top:26%; font-size:1.05rem;
+  --c1:var(--accent);
+  --c2:color-mix(in srgb, var(--accent) 35%, #fff);
+  --t:19s; --d:-14s; }
+.fw4 { left:91%; top:58%; font-size:1.35rem;
+  --c1:#6FD3C4; --c2:#D8FFF6;
+  --t:22s; --d:-6s; }
+@keyframes rise {
+  0%, 55% { transform:translateY(16rem); opacity:0; }
+  57% { opacity:.9; }
+  62%, 100% { transform:translateY(0); opacity:0; } }
+@keyframes burst {
+  0%, 62% { transform:scale(.08); opacity:0; }
+  63% { opacity:1; }
+  82% { transform:scale(1); opacity:.5; }
+  90%, 100% { transform:scale(1.12); opacity:0; } }
+@media (max-width:960px) { .fw { display:none; } }
+</style>
+
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <i class="fw fw1"></i>
+  <i class="fw fw2"></i>
+  <i class="fw fw3"></i>
+  <i class="fw fw4"></i>
+</div>
+<div class="wrap">
+
+<nav class="top">
+  <a class="sig" href="/">Ritesh Ragavender</a>
+  <div class="links">
+    <a href="/bookshelf/">Bookshelf</a>
+    <a href="/essays/">Essays</a>
+    <a href="/poems/" class="here">Poems</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <a class="crumb" href="/poems/">← All poems</a>
+  <h1>A Fleeting Forever</h1>
+  <p class="meta">2023 · TO HAVE LOVED AND LOST</p>
+</div>
+
+<div class="poem-solo">
+<pre>
+They say the carbon in my hand
+Was forged in stars I cannot understand
+Ten billion years of spent debris
+Arranged, improbably, into me
+
+And by some even stranger odds
+They drew you too, those smiling gods
+Two accidents of dust and flame
+Who somehow learned each other&rsquo;s names
+
+For most of time, the world was blind
+No sun had eyes, no rock a mind
+Then matter woke, so when we share
+A desperate kiss &mdash; we're stars aware
+
+The atoms in me aren't my own
+I hold them briefly, all on loan
+None of me was made to stay
+I'll love you always anyway
+</pre>
+</div>
+
+<div class="pn">
+  <span></span>
+  <a href="/poems/half-awake-night/">Half the Night Awake →</a>
+</div>
+
+</div>
+</body>
+</html>

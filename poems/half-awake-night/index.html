@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Half the Night Awake</title>
+<link rel="canonical"
+  href="https://riteshragavender.com/poems/half-awake-night/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v=13">
+<script src="/js/typography.js" defer></script>
+<script>
+window.MathJax = { tex: { inlineMath: [['\\(', '\\)']] } };
+</script>
+<script defer
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+/* basic background: a warm glow low-right, with a few of
+   Ramanujan's results drifting along its rim */
+html { background:var(--paper); }
+body { background:transparent; }
+.sky { position:fixed; inset:0; z-index:-1; pointer-events:none;
+  overflow:hidden;
+  background:
+    radial-gradient(38rem 32rem at 88% 82%,
+      color-mix(in srgb, var(--work) 26%, transparent), transparent 60%),
+    radial-gradient(34rem 30rem at 73% 93%,
+      color-mix(in srgb, #E45BFF 16%, transparent), transparent 62%),
+    radial-gradient(30rem 34rem at 97% 69%,
+      color-mix(in srgb, #2BE4D8 13%, transparent), transparent 60%),
+    radial-gradient(46rem 42rem at 82% 80%,
+      color-mix(in srgb, var(--accent) 15%, transparent),
+      transparent 66%);
+  animation:insight-hue 10s ease-in-out infinite; }
+@keyframes insight-hue {
+  0%, 100% { filter:hue-rotate(0deg) saturate(1); }
+  50% { filter:hue-rotate(120deg) saturate(1.4); } }
+.ring { position:fixed; right:7%; bottom:16%; width:23rem;
+  height:auto; z-index:-1; pointer-events:none; opacity:.3;
+  fill:none; stroke:color-mix(in srgb, white 55%, var(--accent));
+  stroke-width:0.9; }
+.sky > span {
+  position:absolute; opacity:.5;
+  color:color-mix(in srgb, white 65%, var(--accent));
+  white-space:nowrap; font-family:var(--f-body); font-style:italic;
+  animation:drift 40s ease-in-out infinite; }
+.sky .rt { border-top:1px solid currentColor; padding:0 .12em; }
+.sky > span:nth-child(1){ left:69%; top:52%; font-size:1.2rem;
+  animation-duration:38s; animation-delay:-20s; }
+.sky > span:nth-child(2){ left:64%; top:65%; font-size:1.45rem;
+  animation-duration:52s; animation-delay:-14s; }
+.sky > span:nth-child(3){ left:74%; top:39%; font-size:1.2rem;
+  animation-duration:46s; animation-delay:-30s; }
+.sky > span.lead-eq {
+  left:auto; top:auto; right:7%; bottom:calc(16% + 24rem);
+  width:23rem; text-align:center; font-size:1.2rem; }
+@keyframes drift {
+  0%,100% { transform:translateY(9px); }
+  50%     { transform:translateY(-9px); }
+}
+/* Kekule resonance: crossfade the two double-bond states, so the
+   bonds appear to hop around the ring — the insight made rigorous */
+.ring .bonds line { stroke:inherit; stroke-width:0.9; }
+.ring .bonds-a { animation:kekule-a 5s ease-in-out infinite; }
+.ring .bonds-b { animation:kekule-b 5s ease-in-out infinite; }
+@keyframes kekule-a { 0%,42% {opacity:1;} 58%,100% {opacity:0;} }
+@keyframes kekule-b { 0%,42% {opacity:0;} 58%,100% {opacity:1;} }
+/* six pi electrons riding the delocalization circle */
+.ring .pi { animation:spin 14s linear infinite;
+  transform-origin:50px 50px; }
+.ring .e { fill:color-mix(in srgb, #2BE4D8 70%, white);
+  stroke:none; opacity:.85; }
+.ring .e:nth-child(2){ transform:rotate(60deg);
+  transform-origin:50px 50px; }
+.ring .e:nth-child(3){ transform:rotate(120deg);
+  transform-origin:50px 50px; }
+.ring .e:nth-child(4){ transform:rotate(180deg);
+  transform-origin:50px 50px; }
+.ring .e:nth-child(5){ transform:rotate(240deg);
+  transform-origin:50px 50px; }
+.ring .e:nth-child(6){ transform:rotate(300deg);
+  transform-origin:50px 50px; }
+@keyframes spin { to { transform:rotate(360deg); } }
+@media (prefers-reduced-motion:reduce) {
+  .ring .bonds-a, .ring .bonds-b, .ring .pi { animation:none; }
+  .ring .bonds-b { opacity:0; }
+  .sky { animation:none; }
+}
+@media (max-width:860px) { .sky, .ring { display:none; } }
+</style>
+
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
+    <polygon points="50,6 88,28 88,72 50,94 12,72 12,28"/>
+    <circle cx="50" cy="50" r="24"/>
+    <g class="bonds bonds-a">
+      <line x1="50.6" y1="15.6" x2="79.4" y2="32.3"/>
+      <line x1="79.4" y1="67.7" x2="50.6" y2="84.4"/>
+      <line x1="20.0" y1="66.7" x2="20.0" y2="33.3"/>
+    </g>
+    <g class="bonds bonds-b">
+      <line x1="80.0" y1="33.3" x2="80.0" y2="66.7"/>
+      <line x1="49.4" y1="84.4" x2="20.6" y2="67.7"/>
+      <line x1="20.6" y1="32.3" x2="49.4" y2="15.6"/>
+    </g>
+    <g class="pi">
+      <circle class="e" cx="50" cy="26" r="1.7"/>
+      <circle class="e" cx="50" cy="26" r="1.7"/>
+      <circle class="e" cx="50" cy="26" r="1.7"/>
+      <circle class="e" cx="50" cy="26" r="1.7"/>
+      <circle class="e" cx="50" cy="26" r="1.7"/>
+      <circle class="e" cx="50" cy="26" r="1.7"/>
+    </g>
+    <text x="50" y="53" text-anchor="middle"
+      font-size="9" fill="currentColor" opacity=".6">1729</text>
+  </svg>
+</div>
+<div class="wrap">
+
+<nav class="top">
+  <a class="sig" href="/">Ritesh Ragavender</a>
+  <div class="links">
+    <a href="/bookshelf/">Bookshelf</a>
+    <a href="/essays/">Essays</a>
+    <a href="/poems/" class="here">Poems</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <a class="crumb" href="/poems/">← All poems</a>
+  <h1>Half the Night Awake</h1>
+  <p class="meta">2025 · THE THOUGHTS OF GOD</p>
+</div>
+
+<div class="poem-solo">
+<pre>
+Once Woz was up for half the night
+Trance-like, saw that black-and-white
+Could turn to color &mdash; cheap and clean
+One well-timed chip would paint the screen
+
+Kekul&eacute;, dozing, saw a sapphire snake
+That bit its tail, then jerked awake
+And knew at last why six would cling
+That benzene coils &mdash; a carbon ring
+
+A Madras clerk could feel her write
+A Hindu goddess on his tongue at night
+In blood, the primes and sums that no one knew
+Too strange to fake, and yes, all true
+
+Mark well the minds these visions found
+Not idle men just standing 'round
+Each one had worked their search to death
+And thought of it with every breath
+For why should God descend to heed a call
+From those who never yearned at all?
+</pre>
+</div>
+
+<div class="pn">
+  <a href="/poems/fleeting-forever/">← A Fleeting Forever</a>
+  <a href="/poems/eight-billion-lives/">Eight Billion Lives →</a>
+</div>
+
+</div>
+</body>
+</html>

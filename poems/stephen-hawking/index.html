@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RIP Stephen Hawking</title>
+<link rel="canonical"
+  href="https://riteshragavender.com/poems/stephen-hawking/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v=13">
+<script src="/js/typography.js" defer></script>
+
+<style>
+/* a black hole, faintly radiating — the thing he explained */
+html { background:var(--paper); }
+body { background:transparent; }
+.sky { position:fixed; inset:0; z-index:-1; pointer-events:none;
+  overflow:hidden;
+  background:
+    radial-gradient(50rem 36rem at 0% 110%,
+      color-mix(in srgb, var(--muted) 14%, transparent),
+      transparent 70%); }
+
+/* sparse, still stars — dimmer than a clear night */
+.sky::before { content:''; position:absolute; inset:0;
+  background-image:
+    radial-gradient(1.6px 1.6px at 7% 24%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 14% 62%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 21% 12%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 28% 84%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 35% 38%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 43% 70%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 52% 18%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 58% 56%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 66% 88%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 47% 92%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 9% 44%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 84% 78%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1px 1px at 31% 6%,
+      var(--accent) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 74% 64%,
+      var(--accent) 50%, transparent 52%);
+  opacity:.5; }
+
+/* accretion glow, brighter on one side, slowly turning.
+   plasma runs hot — orange, the one warm note on the site */
+.halo, .hole { position:absolute; top:5rem; right:-4rem;
+  width:38rem; height:38rem; border-radius:50%;
+  --ember:#E8944D; --ember-deep:#8F4522; }
+.halo {
+  background:
+    conic-gradient(from 210deg,
+      color-mix(in srgb, var(--ember) 30%, transparent),
+      color-mix(in srgb, var(--ember) 6%, transparent) 38%,
+      color-mix(in srgb, var(--ember) 18%, transparent) 64%,
+      color-mix(in srgb, var(--ember) 30%, transparent));
+  -webkit-mask:radial-gradient(closest-side,
+    transparent 0 33%, #000 38% 54%, transparent 74%);
+  mask:radial-gradient(closest-side,
+    transparent 0 33%, #000 38% 54%, transparent 74%);
+  filter:blur(6px);
+  animation:spin 90s linear infinite; }
+
+/* the hole itself, and its thin photon ring — white-hot at
+   the ring, cooling outward through purple */
+.hole {
+  background:radial-gradient(closest-side,
+    color-mix(in srgb, var(--ember) 12%, #000) 0 35%,
+    color-mix(in srgb, var(--ember) 30%, #fff) 36% 37%,
+    var(--ember) 38.5%,
+    color-mix(in srgb, var(--ember) 55%, transparent) 42%,
+    color-mix(in srgb, var(--ember-deep) 55%, transparent) 50%,
+    transparent 66%);
+  animation:radiate 8s ease-in-out infinite; }
+
+@keyframes spin { to { transform:rotate(1turn); } }
+@keyframes radiate {
+  0%,100% { opacity:.8; } 50% { opacity:1; } }
+
+/* keep the disc clear of the text column; hide when the
+   viewport is too narrow for both */
+@media (max-width:1280px) {
+  .halo, .hole { width:26rem; height:26rem; right:-7rem; } }
+@media (max-width:960px) {
+  .halo, .hole { display:none; } }
+</style>
+
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <div class="halo"></div>
+  <div class="hole"></div>
+</div>
+<div class="wrap">
+
+<nav class="top">
+  <a class="sig" href="/">Ritesh Ragavender</a>
+  <div class="links">
+    <a href="/bookshelf/">Bookshelf</a>
+    <a href="/essays/">Essays</a>
+    <a href="/poems/" class="here">Poems</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <a class="crumb" href="/poems/">← All poems</a>
+  <h1>RIP Stephen Hawking</h1>
+  <p class="meta">2018 · IN MEMORIAM</p>
+</div>
+
+<div class="poem-solo">
+<pre>If there is indeed a Book
+With all the answers for those who look
+A reward for meeting the suffering of life
+At long last, solace from Uncertainty's knife
+The nature of time and human intelligence
+Revealed amidst tales of Universal adolescence
+
+He is certainly reading it now
+And he deserves this feeling of wow
+
+A man cursed by a God who plays dice
+A man for whom physics was paradise
+A man who ventured far into paradox
+A man who sought to live despite Death&rsquo;s knocks
+A man who fought to explain quantum gravity
+A man who lived with gratitude and levity
+A man who taught us all
+Alas, he too must fall</pre>
+<p class="after">RIP Stephen Hawking</p>
+</div>
+
+<div class="pn">
+  <a href="/poems/eight-billion-lives/">← Eight Billion Lives</a>
+  <span></span>
+</div>
+
+
+</div>
+</body>
+</html>

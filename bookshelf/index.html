@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books Worth Reading</title>
+<link rel="canonical"
+  href="https://riteshragavender.com/bookshelf/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css?v=13">
+<script src="/js/typography.js" defer></script>
+<style>
+/* The panel under the shelf shows only a title and an author. */
+.book-log.shelf-mode summary { border-bottom:none; margin-bottom:0;
+  padding:0; }
+.book-log.shelf-mode .entry[open] { padding:1.2rem 2rem; }
+.entry summary a { display:contents; color:inherit;
+  text-decoration:none; }
+.entry summary a span { pointer-events:auto; cursor:pointer; }
+.entry summary a:hover .bt { color:var(--accent); }
+.entry summary a .bt::after { content:' \2197'; font-size:.6em;
+  color:var(--accent); }
+/* The page title is shorter on a phone. */
+.title-phone { display:none; }
+@media (max-width:760px) {
+  .title-wide { display:none; }
+  .title-phone { display:inline; }
+  .page-head h1 { margin-top:0; }
+}
+.book-log:not(.shelf-mode) summary { cursor:default; }
+.book-log:not(.shelf-mode) summary::after { content:''; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="top">
+  <a class="sig" href="/">Ritesh Ragavender</a>
+  <div class="links">
+    <a href="/bookshelf/" class="here">Bookshelf</a>
+    <a href="/essays/">Essays</a>
+    <a href="/poems/">Poems</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <h1><span class="title-wide">Books Worth Reading</span><span
+    class="title-phone">Great Books</span></h1>
+</div>
+
+<section style="border-bottom:none; padding-top:0;">
+  <div class="shelf-wrap">
+<button class="shelf-nav prev" type="button"
+  aria-label="Scroll shelf left">&larr;</button>
+<div class="shelf-scroll"><div class="shelf-inner"><div class="shelf">
+    <div class="book" role="button" data-idx="0"
+      tabindex="0" style="background:#2E5E52; color:#DEEAE4; width:40px;
+        height:236px;">Genentech</div>
+    <div class="book" role="button" data-idx="1"
+      tabindex="0" style="background:#C9A227; color:#241F0E; width:56px;
+        height:248px;">Creativity, Inc.</div>
+    <div class="book" role="button" data-idx="2"
+      tabindex="0" style="background:#2C3A5E; color:#E8E4D8; width:56px;
+        height:252px;">Becoming Steve Jobs</div>
+    <div class="book" role="button" data-idx="3"
+      tabindex="0" style="background:#B0562C; color:#2A1408; width:56px;
+        height:252px;">Rules for Radicals</div>
+    <div class="book" role="button" data-idx="4"
+      tabindex="0" style="background:#D8D2C4; color:#2B2820; width:36px;
+        height:236px;">Boyd</div>
+    <div class="book" role="button" data-idx="5"
+      tabindex="0" style="background:#6E2F4E; color:#F2DEE8; width:56px;
+        height:220px;">Invention: A Life</div>
+    <div class="book" role="button" data-idx="6"
+      tabindex="0" style="background:#8E7FD0; color:#17122E; width:36px;
+        height:252px;">Skunk Works</div>
+    <div class="book lean" role="button" data-idx="7"
+      tabindex="0" style="background:#1E1C22; color:#D9D4E8; width:40px;
+        height:210px;">Liftoff</div>
+    <div class="book" role="button" data-idx="8"
+      tabindex="0" style="background:#A11F2B; color:#F5E9E7; width:36px;
+        height:228px;">Freedom's Forge</div>
+    <div class="book" role="button" data-idx="9"
+      tabindex="0" style="background:#54627C; color:#E4E8EF; width:56px;
+        height:252px;">Engineers of Victory</div>
+    <div class="book" role="button" data-idx="10"
+      tabindex="0" style="background:#C9A227; color:#241F0E; width:40px;
+        height:244px;">Relentless</div>
+    <div class="book" role="button" data-idx="11"
+      tabindex="0" style="background:#7A3030; color:#EFE3DD; width:56px;
+        height:244px;">The Strangest Man</div>
+    <div class="book" role="button" data-idx="12"
+      tabindex="0" style="background:#1C2B3A; color:#CFE0EC; width:56px;
+        height:252px;">At Home in the Universe</div>
+    <div class="book" role="button" data-idx="13"
+      tabindex="0" style="background:#D8D2C4; color:#2B2820; width:56px;
+        height:252px;">How the Laser Happened</div>
+    <div class="book" role="button" data-idx="14"
+      tabindex="0" style="background:#5646C8; color:#EFEDFA; width:56px;
+        height:252px;">Insisting on the Impossible</div>
+    <div class="book lean" role="button" data-idx="15"
+      tabindex="0" style="background:#3E3A44; color:#CFC9BC; width:38px;
+        height:236px;">Elon Musk</div>
+    <div class="book" role="button" data-idx="16"
+      tabindex="0" style="background:#B0562C; color:#2A1408; width:56px;
+        height:236px;">The Intel Trinity</div>
+    <div class="book" role="button" data-idx="17"
+      tabindex="0" style="background:#2E5E52; color:#DEEAE4; width:56px;
+        height:252px;">Energy: A Human History</div>
+    <div class="book" role="button" data-idx="18"
+      tabindex="0" style="background:#8E7FD0; color:#17122E; width:56px;
+        height:252px;">The Prosperity Paradox</div>
+    <div class="book" role="button" data-idx="19"
+      tabindex="0" style="background:#2C3A5E; color:#E8E4D8; width:56px;
+        height:252px;">Engines That Move Markets</div>
+    <div class="book" role="button" data-idx="20"
+      tabindex="0" style="background:#C9A227; color:#241F0E; width:56px;
+        height:252px;">Love's Executioner</div>
+    <div class="book" role="button" data-idx="21"
+      tabindex="0" style="background:#6E2F4E; color:#F2DEE8; width:56px;
+        height:248px;">From Third World to First</div>
+    <div class="book lean" role="button" data-idx="22"
+      tabindex="0" style="background:#54627C; color:#E4E8EF; width:40px;
+        height:232px;">Morris Chang</div>
+    <div class="book" role="button" data-idx="23"
+      tabindex="0" style="background:#A11F2B; color:#F5E9E7; width:44px;
+        height:244px;">The Algorithm</div>
+    <div class="book" role="button" data-idx="24"
+      tabindex="0" style="background:#1E1C22; color:#D9D4E8; width:44px;
+        height:240px;">Cold Steel</div>
+    <div class="book" role="button" data-idx="25"
+      tabindex="0" style="background:#D8D2C4; color:#2B2820; width:44px;
+        height:236px;">The Nvidia Way</div>
+    <div class="book" role="button" data-idx="26"
+      tabindex="0" style="background:#7A3030; color:#EFE3DD; width:60px;
+        height:252px;">Maritime Economics</div>
+    <div class="book" role="button" data-idx="27"
+      tabindex="0" style="background:#5646C8; color:#EFEDFA; width:48px;
+        height:244px;">American Icon</div>
+    <div class="book" role="button" data-idx="28"
+      tabindex="0" style="background:#C9A227; color:#241F0E; width:40px;
+        height:232px;">Cable Cowboy</div>
+  </div>
+  <div class="shelf-board"></div></div></div>
+<button class="shelf-nav next" type="button"
+  aria-label="Scroll shelf right">&rarr;</button>
+</div>
+</section>
+<section class="book-log">
+  <details class="entry" name="books" data-book="genentech">
+    <summary>
+      <a href="https://www.amazon.com/dp/0226359182" target="_blank"
+        rel="noopener">
+        <span class="bt">Genentech: The Beginnings of Biotech</span>
+        <span class="ba">Sally Smith Hughes</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="creativity-inc">
+    <summary>
+      <a href="https://www.amazon.com/dp/0812993012" target="_blank"
+        rel="noopener">
+        <span class="bt">Creativity, Inc.</span>
+        <span class="ba">Ed Catmull</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="becoming-steve-jobs">
+    <summary>
+      <a href="https://www.amazon.com/dp/0385347405" target="_blank"
+        rel="noopener">
+        <span class="bt">Becoming Steve Jobs</span>
+        <span class="ba">Schlender &amp; Tetzeli</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="rules-for-radicals">
+    <summary>
+      <a href="https://www.amazon.com/dp/0394717368" target="_blank"
+        rel="noopener">
+        <span class="bt">Rules for Radicals</span>
+        <span class="ba">Saul Alinsky</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="boyd-the-fighter-pilot">
+    <summary>
+      <a href="https://www.amazon.com/dp/0316881465" target="_blank"
+        rel="noopener">
+        <span class="bt">Boyd</span>
+        <span class="ba">Robert Coram</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="invention-a-life">
+    <summary>
+      <a href="https://www.amazon.com/dp/1982188421" target="_blank"
+        rel="noopener">
+        <span class="bt">Invention: A Life</span>
+        <span class="ba">James Dyson</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="skunk-works">
+    <summary>
+      <a href="https://www.amazon.com/dp/0316743003" target="_blank"
+        rel="noopener">
+        <span class="bt">Skunk Works</span>
+        <span class="ba">Ben Rich</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="liftoff">
+    <summary>
+      <a href="https://www.amazon.com/dp/0062979973" target="_blank"
+        rel="noopener">
+        <span class="bt">Liftoff</span>
+        <span class="ba">Eric Berger</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="freedoms-forge">
+    <summary>
+      <a href="https://www.amazon.com/dp/1400069645" target="_blank"
+        rel="noopener">
+        <span class="bt">Freedom&rsquo;s Forge</span>
+        <span class="ba">Arthur Herman</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="engineers-of-victory">
+    <summary>
+      <a href="https://www.amazon.com/dp/1400067618" target="_blank"
+        rel="noopener">
+        <span class="bt">Engineers of Victory</span>
+        <span class="ba">Paul Kennedy</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="relentless">
+    <summary>
+      <a href="https://www.amazon.com/dp/1476714207" target="_blank"
+        rel="noopener">
+        <span class="bt">Relentless</span>
+        <span class="ba">Tim Grover</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="the-strangest-man">
+    <summary>
+      <a href="https://www.amazon.com/dp/0571222781" target="_blank"
+        rel="noopener">
+        <span class="bt">The Strangest Man</span>
+        <span class="ba">Graham Farmelo</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="at-home-in-the-universe">
+    <summary>
+      <a href="https://www.amazon.com/dp/0140174141" target="_blank"
+        rel="noopener">
+        <span class="bt">At Home in the Universe</span>
+        <span class="ba">Stuart Kauffman</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="how-the-laser-happened">
+    <summary>
+      <a href="https://www.amazon.com/dp/0195153766" target="_blank"
+        rel="noopener">
+        <span class="bt">How the Laser Happened</span>
+        <span class="ba">Charles Townes</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="insisting-on-the-impossible">
+    <summary>
+      <a href="https://www.amazon.com/dp/0738201901" target="_blank"
+        rel="noopener">
+        <span class="bt">Insisting on the Impossible</span>
+        <span class="ba">Victor McElheny</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="elon-musk">
+    <summary>
+      <a href="https://www.amazon.com/dp/1982181281" target="_blank"
+        rel="noopener">
+        <span class="bt">Elon Musk</span>
+        <span class="ba">Walter Isaacson</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="the-intel-trinity">
+    <summary>
+      <a href="https://www.amazon.com/dp/0062226762" target="_blank"
+        rel="noopener">
+        <span class="bt">The Intel Trinity</span>
+        <span class="ba">Michael Malone</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="energy-a-human-history">
+    <summary>
+      <a href="https://www.amazon.com/dp/1501105353" target="_blank"
+        rel="noopener">
+        <span class="bt">Energy: A Human History</span>
+        <span class="ba">Richard Rhodes</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="the-prosperity-paradox">
+    <summary>
+      <a href="https://www.amazon.com/dp/0062946730" target="_blank"
+        rel="noopener">
+        <span class="bt">The Prosperity Paradox</span>
+        <span class="ba">Christensen, Ojomo &amp; Dillon</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="engines-that-move-markets">
+    <summary>
+      <a href="https://www.amazon.com/dp/0471205958" target="_blank"
+        rel="noopener">
+        <span class="bt">Engines That Move Markets</span>
+        <span class="ba">Alasdair Nairn</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="love-executioner">
+    <summary>
+      <a href="https://www.amazon.com/dp/0060958340" target="_blank"
+        rel="noopener">
+        <span class="bt">Love&rsquo;s Executioner</span>
+        <span class="ba">Irvin D. Yalom</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="from-third-world-to-first">
+    <summary>
+      <a href="https://www.amazon.com/dp/0060197765" target="_blank"
+        rel="noopener">
+        <span class="bt">From Third World to First</span>
+        <span class="ba">Lee Kuan Yew</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="morris-chang-autobiography">
+    <summary>
+      <a href="https://www.amazon.com/dp/6263559675" target="_blank"
+        rel="noopener">
+        <span class="bt">The Autobiography of Morris Chang</span>
+        <span class="ba">Morris Chang</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="the-algorithm">
+    <summary>
+      <a href="https://www.amazon.com/dp/B0FGJZLZKG" target="_blank"
+        rel="noopener">
+        <span class="bt">The Algorithm</span>
+        <span class="ba">Jon McNeill</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="cold-steel">
+    <summary>
+      <a href="https://www.amazon.com/dp/0349120978" target="_blank"
+        rel="noopener">
+        <span class="bt">Cold Steel</span>
+        <span class="ba">Bouquet &amp; Ousey</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="the-nvidia-way">
+    <summary>
+      <a href="https://www.amazon.com/dp/1324086718" target="_blank"
+        rel="noopener">
+        <span class="bt">The Nvidia Way</span>
+        <span class="ba">Tae Kim</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="maritime-economics">
+    <summary>
+      <a href="https://www.amazon.com/dp/0415275571" target="_blank"
+        rel="noopener">
+        <span class="bt">Maritime Economics</span>
+        <span class="ba">Martin Stopford</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="american-icon">
+    <summary>
+      <a href="https://www.amazon.com/dp/0307886069" target="_blank"
+        rel="noopener">
+        <span class="bt">American Icon</span>
+        <span class="ba">Bryce Hoffman</span>
+      </a>
+    </summary>
+  </details>
+  <details class="entry" name="books" data-book="cable-cowboy">
+    <summary>
+      <a href="https://www.amazon.com/dp/047123639X" target="_blank"
+        rel="noopener">
+        <span class="bt">Cable Cowboy</span>
+        <span class="ba">Mark Robichaux</span>
+      </a>
+    </summary>
+  </details>
+</section>
+
+
+
+</div>
+<script src="/js/bookshelf.js" defer></script>
+</body>
+</html>

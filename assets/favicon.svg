@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- glitch ghosts -->
+  <g fill="none" stroke-width="6.5" stroke-linejoin="bevel"
+    opacity=".7">
+    <path d="M15 52 V12 H31 L38 19 V26 L31 33 H15 M26 33 L38 52"
+      stroke="#2BE4D8" transform="translate(-1.8 0)"/>
+    <path d="M15 52 V12 H31 L38 19 V26 L31 33 H15 M26 33 L38 52"
+      stroke="#E45BFF" transform="translate(1.8 0)"/>
+  </g>
+  <!-- main R -->
+  <path d="M15 52 V12 H31 L38 19 V26 L31 33 H15 M26 33 L38 52"
+    fill="none" stroke="#C4B2FF" stroke-width="6.5"
+    stroke-linejoin="bevel" filter="url(#glow)"/>
+  <!-- superscript 2 -->
+  <g fill="none" stroke-width="3.6" stroke-linejoin="bevel">
+    <path d="M45 13 H55 L45 24 H56" stroke="#2BE4D8"
+      filter="url(#glow)"/>
+  </g>
+</svg>
