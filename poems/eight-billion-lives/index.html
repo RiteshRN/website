@@ -9,14 +9,15 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css?v=13">
 <script src="/js/typography.js" defer></script>
+<script src="/js/lights.js" defer></script>
 
 <style>
-/* twenty-four faces — real synthetic (nobody-real) portrait
-   photos, duotoned to the site palette — packed into a tight
-   3-wide grid, no gaps, square corners, like an Instagram
-   profile grid. sits in the margin to the right of the text,
-   starting at the poem's first line, clipped so it never
-   bleeds into the footer. */
+/* a rail of small lights in the margin to the right of the
+   poem. each light fades and drifts on its own timing, so
+   no two stay in step. five larger purple lights sit level
+   with the five people in the poem. they appear first, one
+   at a time, and the rest follow. js/lights.js adds the
+   lights and sets each one's timing variables. */
 html { background:var(--paper); }
 body { background:transparent; }
 .sky { position:fixed; inset:0; z-index:-1; pointer-events:none;
@@ -30,20 +31,38 @@ body { background:transparent; }
       transparent 70%); }
 
 .poem-solo { position:relative; }
-.portrait-rail { position:absolute; top:1rem; left:100%;
-  margin-left:2.25rem; width:16.5rem;
-  max-height:calc(100% - 5rem); overflow:hidden;
-  display:grid; grid-template-columns:repeat(3, 1fr);
-  gap:0; pointer-events:none; }
-.portrait { position:relative; aspect-ratio:1;
-  overflow:hidden; isolation:isolate; opacity:.8; }
-.portrait img { width:100%; height:100%; object-fit:cover;
-  display:block; filter:grayscale(1) contrast(1.05); }
-.portrait::after { content:''; position:absolute; inset:0;
-  background:var(--c, var(--accent)); mix-blend-mode:color; }
+.lights { position:absolute; top:1rem; bottom:4rem; left:100%;
+  margin-left:2.25rem; width:16.5rem; pointer-events:none; }
+.light { position:absolute; width:3px; height:3px;
+  border-radius:50%; background:var(--ink); opacity:.3;
+  animation:
+    fade var(--fade) ease-in-out var(--phase) infinite alternate,
+    drift var(--drift) ease-in-out var(--phase) infinite alternate,
+    appear .9s ease-out var(--appear) backwards; }
+.light.named { width:8px; height:8px; margin:-4px 0 0 -4px;
+  background:var(--accent); opacity:1;
+  box-shadow:0 0 10px var(--accent);
+  animation-name:fade-named, drift, appear; }
+/* each named light sends out a ring that grows and fades */
+.light.named::after { content:''; position:absolute; inset:0;
+  border-radius:50%; border:1px solid var(--accent); opacity:0;
+  animation:ring var(--ring) ease-out var(--appear) infinite; }
+@keyframes fade {
+  from { opacity:.05; }
+  to { opacity:.95; } }
+@keyframes fade-named {
+  from { opacity:.5; }
+  to { opacity:1; } }
+@keyframes drift {
+  to { transform:translate(var(--dx), var(--dy)); } }
+@keyframes appear {
+  from { scale:0; } }
+@keyframes ring {
+  from { transform:scale(1); opacity:.9; }
+  to { transform:scale(7); opacity:0; } }
 
 @media (max-width:1100px) {
-  .portrait-rail { display:none; } }
+  .lights { display:none; } }
 </style>
 
 </head>
@@ -86,6 +105,7 @@ To love a town and watch it burn
 Eight billion lives are lived alone
 A private grief, a pride unknown
 </pre>
+<div class="lights" aria-hidden="true"></div>
 </div>
 
 <div class="pn">
